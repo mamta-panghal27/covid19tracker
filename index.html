@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1> COVID-19 Tracker</h1>
+
+        <p class="subtitle">
+            Live COVID-19 Statistics Using disease.sh API
+        </p>
+
+        <!-- Search Section -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="countryInput"
+                placeholder="Enter Country Name..."
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+        <div id="loader" class="loader hidden">
+            Loading...
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <!-- Data Card -->
+
+        <div class="card">
+
+            <div class="country-info">
+
+                <img
+                    id="flag"
+                    src=""
+                    alt="Country Flag"
+                >
+
+                <h2 id="countryName">
+                    Worldwide
+                </h2>
+
+            </div>
+
+            <div class="stats">
+
+                <div class="box">
+                    <h3>Total Cases</h3>
+                    <p id="cases">0</p>
+                </div>
+
+                <div class="box">
+                    <h3>Recovered</h3>
+                    <p id="recovered">0</p>
+                </div>
+
+                <div class="box">
+                    <h3>Deaths</h3>
+                    <p id="deaths">0</p>
+                </div>
+
+                <div class="box">
+                    <h3>Active</h3>
+                    <p id="active">0</p>
+                </div>
+
+                <div class="box">
+                    <h3>Today's Cases</h3>
+                    <p id="todayCases">0</p>
+                </div>
+
+                <div class="box">
+                    <h3>Today's Deaths</h3>
+                    <p id="todayDeaths">0</p>
+                </div>
+
+            </div>
+
+            <p id="updated" class="updated">
+                Last Updated:
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
